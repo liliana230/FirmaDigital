@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirmaDigital.ListaFirmas">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="imagen"></Image>
+            <ListView x:Name="lista" Background="#B0D1EE" ItemSelected="lista_ItemSelected" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding cod}" Grid.Row="0" Grid.Column="0" TextColor="Black" Style="{StaticResource Font-1}" FontSize="Medium"></Label>
+                                <Label  x:Name="txtnom" Text="{Binding nombre}" Grid.Row="1" Grid.Column="1" TextColor="Black" Padding="10" FontSize="Medium"></Label>
+                                <Label Style="{StaticResource Font-1}" Text="{Binding descripcion}" Grid.Row="0" Grid.Column="2" TextColor="black" FontSize="Medium" x:Name="txtdescripcion"></Label>
+                                <Label   x:Name="codimagen" Text="{Binding codimagen}" Grid.Row="3" Grid.Column="0" TextColor="Black" FontSize="Medium" IsVisible="false"></Label>
+                            
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

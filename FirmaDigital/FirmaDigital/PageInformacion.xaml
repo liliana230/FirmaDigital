@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirmaDigital.PageInformacion">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#75CBF3" Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                <Label Text="Información Sobre La Firma" TextColor="Black" Style="{StaticResource Font-1}" 
+                       HorizontalOptions="Center" Margin="10" FontSize="30"></Label>
+
+                    <Image x:Name="imagefirma" Grid.Row="0" Grid.Column="0" HeightRequest="300" WidthRequest="300" Margin="0,50,0,0"
+                           VerticalOptions="Start" HorizontalOptions="CenterAndExpand" BackgroundColor="#E9F2FA"/>
+
+                <Label Style="{StaticResource Font-1}" Text="Nombre : " Grid.Row="1" TextColor="Black"
+                       Grid.Column="0" FontAttributes="Bold" Margin="25,0,25,0" FontSize="25"></Label>
+                <Label Style="{StaticResource Font-1}" x:Name="nombre" Grid.Row="1" Grid.Column="0" 
+                       HorizontalOptions="Center" FontSize="25" TextColor="Black"></Label>
+                <Label Style="{StaticResource Font-1}" Text="Descripcion :  " Grid.Row="2" Grid.Column="0" 
+                       TextColor="Black" FontAttributes="Bold" FontSize="25" Margin="25,0,25,0"></Label>
+                <Label Style="{StaticResource Font-1}" x:Name="descripcion" Grid.Row="2" Grid.Column="0" 
+                       TextColor="Black" HorizontalOptions="Center" FontSize="25"></Label>
+                </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

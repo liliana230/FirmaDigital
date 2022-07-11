@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImageSource="firmas.jpg"
+             x:Class="FirmaDigital.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#69B5F9" Padding="15" CornerRadius="0" BorderColor="#187ED8">
+            <Label Text="Aplicacion FirmaDigital" TextColor="Black" Style="{StaticResource Font-1}" HorizontalTextAlignment="Center"  FontSize="36"/>
+        </Frame>
+
+        <Button x:Name="agregar" BackgroundColor="#69B5F9" VerticalOptions="EndAndExpand" BorderColor="#187ED8" FontSize="20" 
+                Text="Agregar Firma Digital" TextColor="Black" Clicked="agregar_Clicked" Style="{StaticResource Font-1}"></Button>
+
+    </StackLayout>
+
+</ContentPage>

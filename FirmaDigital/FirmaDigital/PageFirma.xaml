@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="FirmaDigital.PageFirma">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Background="white">
+            <Image Source="firmaas.jpg" HorizontalOptions="Center" HeightRequest="100" WidthRequest="300"/>
+                <forms:SignaturePadView x:Name="vista" StrokeColor="Black"
+                BackgroundColor="#E9F2FA"
+                            StrokeWidth="4"
+                            HeightRequest="280"
+                            WidthRequest="280"/>
+
+
+                <Entry x:Name="nombre" Margin="30,0,30,0" Placeholder="Nombre"  Keyboard="Text" BackgroundColor="#75CBF3" TextColor="Black"></Entry>
+                <Entry x:Name="descrip" Margin="30,0,30,0"  Placeholder="Descripcion" Keyboard="Text" TextColor="Black" BackgroundColor="#75CBF3"></Entry>
+
+                <Button  Text="Guardar En SQLite" Margin="50,0,50,0" x:Name="guardar" Background="#B0D1EE" Clicked="guardar_Clicked" TextColor="Black"></Button>
+                <Button  Text="LISTA FIRMAS" Margin="50,0,50,0" Clicked="lista_Clicked" Background="#B0D1EE" x:Name="lista" TextColor="Black"></Button>
+                <Button  Text="Borrar Firma" Margin="50,0,50,0" Clicked="borrar_Clicked" Background="#B0D1EE" x:Name="borrar" TextColor="Black"></Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
